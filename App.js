@@ -1,24 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
+import { SafeAreaView } from "react-native-web";
 import CustomButton from "./components/CustomButton";
+import GuessCountryFromFlag from "./screens/GuessCountryFromFlag";
+import testData from "./data/testData";
+import { COLOURS, SIZES } from "./assets/constants";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.headingsContainer}>
-        <Text style={styles.mainHeading}>Flags, Countries and Capitals</Text>
-        <Text style={styles.subHeading}>Select a game mode from below..</Text>
-      </View>
-      <View style={styles.buttonList}>
-        <CustomButton text="Guess country from flag"></CustomButton>
-        <CustomButton text="Guess capital of country"></CustomButton>
-        <CustomButton text="Guess country from capital"></CustomButton>
-        <CustomButton text="Guess country from famous attraction"></CustomButton>
-        <CustomButton text="Guess country from a fact/statement"></CustomButton>
-      </View>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <GuessCountryFromFlag />;
 }
 
 const styles = StyleSheet.create({
