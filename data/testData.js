@@ -153,7 +153,10 @@ export default testData = [
   {
     flagImageURL: require("../assets/flags/Argentina.gif"),
     country: "Argentina",
-    famousMonumentOrPlaceImageURL: require("../assets/monumentsAndPlaces/argentina-christ-of-the-mountains.jpg"),
+    famousMonumentOrPlaceImageURL: [
+      require("../assets/monumentsAndPlaces/argentinaChristOfTheMountains.jpg"),
+      require("../assets/monumentsAndPlaces/argentinaNationalFlagMemorial.png"),
+    ],
     countryOptions: [
       "Chile",
       "Bolivia",
