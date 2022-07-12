@@ -1596,7 +1596,7 @@ export default testData = [
     continent: "North America",
   },
   {
-    flagImageURL: require("../assets/flags/Saint Lucia.gif"),
+    flagImageURL: require("../assets/flags/SaintLucia.gif"),
     country: "Saint Lucia",
     famousMonumentOrPlaceImageURL: [],
     countryOptions: [],

@@ -1,13 +1,34 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
-import { SafeAreaView } from "react-native-web";
+import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
 import CustomButton from "./components/CustomButton";
 import GuessCountryFromFlag from "./screens/GuessCountryFromFlag";
+import ConfigGuessCountryFromFlag from "./screens/ConfigGuessCountryFromFlag";
 import testData from "./data/testData";
 import { COLOURS, SIZES } from "./assets/constants";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "./screens/Home";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return <GuessCountryFromFlag />;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        {/* <Stack.Screen name={"Home"} component={Home} /> */}
+        <Stack.Group>
+          <Stack.Screen
+            name={"ConfigGuessCountryFromFlag"}
+            component={ConfigGuessCountryFromFlag}
+          />
+          <Stack.Screen
+            name={"GuessCountryFromFlag"}
+            component={GuessCountryFromFlag}
+          />
+        </Stack.Group>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
 const styles = StyleSheet.create({
